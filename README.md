@@ -186,3 +186,25 @@ Creamos el componente addTask.js
   const taskList = JSON.parse(localStorage.getItem('tasks')) || [];
   console.log(taskList);
 ```
+# Cortocircuito pipe
+Durante el curso utilizamos pipe || para crear una nueva evaluación de cortocircuito( short circuit evaluation).
+```js
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [ ]
+```
+Con eso, le decimos a la aplicación que en caso de que localStorage este con datos se comporte de una manera, si en caso contrario estuviera vacío, la constante tasks empezaría como un arreglo vacío. Las expresiones lógicas son evaluadas de izquierda a derecha, luego, si la primera declaración sea verdadera se ejecuta normalmente y la segunda declaración no es aplicada, y si el primer es evaluado como falso, ejecutamos el segundo caso.
+
+* true || false // true
+* false || true // true
+
+# Exhibiendo datos del localStore
+En nuestra aplicación ya pudimos guardar los datos que el usuario rellena dentro del localStorage:
+```js
+const tasksList = JSON.parse(localStorage.getItem('tasks')) || [ ]
+```
+Tenemos una función llamada `createTask()` el cual genera la estructura HTML de como los datos serán exhibidos y una constante `list` que tiene la referencia del elemento donde queremos agregar cada tarea, necesitamos enviarle cada una de las tareas e indicarle donde ponerla, ¿Cómo podemos hacerlo?
+```js
+taskList.forEach((task) => {
+   list.appendChild(createTask(task))
+})
+```
+LocalStorage se comporta como un arreglo, podemos utilizar métodos de arreglo como el forEachpara iterar sobre los ítems. Después, cada ítem es pasado para el componente Tarea, lo cual será agregado dentro del elemento padre representado por lista.
