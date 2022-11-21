@@ -140,6 +140,7 @@ task.appendChild(dateElement);
 ```
 
 # Almacenamiento
+
 <https://developer.mozilla.org/es/docs/Web/API/Storage>
 
 La interfaz Storage de la API de almacenamiento web provee acceso al almacenamiento de la sesión o al almacenamiento local para un dominio en particular, permitiéndote por ejemplo añadir, modificar o eliminar elementos de dato almacenados.
@@ -180,6 +181,7 @@ La informacion que nos esta proporcionando el usuario la estamos guardando el se
 Recargo la página y mantengo los datos. El tasks se mantiene. Pero si cierro la pestaña se pierde la información. En sessionsStorage la información vive o persiste mientras la pestaña este abierta.
 
 # Introducción a las APIs web
+
 <https://developer.mozilla.org/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction>
 
 # localStorage
@@ -248,6 +250,16 @@ taskList.forEach((task) => {
 
 LocalStorage se comporta como un arreglo, podemos utilizar métodos de arreglo como el forEachpara iterar sobre los ítems. Después, cada ítem es pasado para el componente Tarea, lo cual será agregado dentro del elemento padre representado por lista.
 
-# dateElement.js
+# dateElement.js  
 
-Creamos este componente para agrupar todas las tareas de un mismo día. En este componente creamos la estructura html para poder agregarla al DOM.
+Creamos este componente para agrupar todas las tareas de un mismo día. En este componente creamos la estructura html para poder agregarla al DOM.  
+
+# Para publicar
+
+![settings](./img/settings.jpg)
+![pages](./img/pages.jpg)
+![main](./img/main.jpg)
+En el repositorio, nos aparece un link
+![repositorio](./img/repositorio.jpg)
+Link de la página en linea
+![link](./img/link.jpg)
